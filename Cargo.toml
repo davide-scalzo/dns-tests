@@ -1,0 +1,30 @@
+[package]
+name = "kingping"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "worker"
+path = "src/worker.rs"
+
+[[bin]]
+name = "coordinator"
+path = "src/coordinator.rs"
+
+[[bin]]
+name = "debug"
+path = "src/debug.rs"
+
+[lib]
+name = 'my_lib'
+path = "lib/lib.rs"
+
+[dependencies]
+csv = "1.3.0"
+futures = "0.3.30"
+hickory-resolver = "0.24.0"
+serde = { version = "1.0.196", features = ["derive"]}
+tokio = { version = "1.36.0", features = ["full"]}
+
+[build-dependencies]
+tonic-build = "0.10"

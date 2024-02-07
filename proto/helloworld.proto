@@ -1,0 +1,24 @@
+syntax = "proto3";
+package helloworld;
+
+
+service Greeter {
+    rpc SayHello (HelloRequest) returns (HelloReply);
+    rpc FetchWebsites (GetWebsites) returns (WebsitesReply);
+}
+
+message HelloRequest {
+    string name = 1;
+}
+
+message HelloReply {
+    string message = 1;
+}
+
+message GetWebsites {
+    string websites = 1;
+}
+
+message WebsitesReply {
+    string websites = 1;
+}
